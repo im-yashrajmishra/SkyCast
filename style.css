@@ -1,0 +1,190 @@
+:root{
+    --var1: rgb(60, 200, 255);
+    --var2: black;
+}
+
+
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.yellow{
+    color: yellow;
+}
+.orange{
+    color: orange;
+}
+
+
+
+
+
+
+body{
+    width: 100%;
+    height: fit-content;
+    min-height: 100vh;
+    background-image: linear-gradient(rgb(255, 100, 255), rgb(150, 0, 255));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main{
+    width: 100%;
+    max-width: 480px;
+    height: fit-content;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+
+
+
+
+
+.application-header{
+    height: fit-content;
+    padding: 2.5px 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: rgb(25, 25, 25);
+}
+.header-box{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.page-logo{
+    height: 34px;
+}
+.page-title{
+    font-size: 32px;
+    font-family: "Protest Riot", sans-serif;
+    font-weight: 500;
+}
+.input-field{
+    width: 220px;
+    height: 30px;
+    margin: 10px;
+    padding: 3px 8px;
+    font-size: 18px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border: none;
+    border-radius: 4px;
+}
+.input-field:focus{
+    outline: 2.5px solid orange;
+}
+.input-field::placeholder{
+    font-size: 18px;
+    color: grey;
+}
+.search-button{
+    width: 60px;
+    height: 30px;
+    background-color: orange;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 600;
+    color: white;
+}
+
+
+
+
+
+.application-main{
+    padding: 15px;
+    width: 100%;
+    height: fit-content;
+    background-color: var(--var1);
+}
+.current-location{
+    font-size: 24px;
+    color: var(--var2);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 600;
+    text-align: center;
+}
+.current-tempreature-image{
+    width: 100%;
+    height: 200px;
+    background-position: center;
+    background-image: url(images/clear-day.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.current-tempreature{
+    font-size: 24px;
+    color: var(--var2);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 600;
+    text-align: center;
+}
+.current-tempreature-details{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.wind, .humidity, .pressure{
+    padding: 10px 5px;
+    margin: 3px 0px;
+    border: 1px solid var(--var2);
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.humidity-logo, .wind-logo, .pressure-logo{
+    height: 50px;
+    margin-right: 5px;
+}
+.humidity-text, .wind-text, .pressure-text{
+    font-size: 16px;
+    font-weight: 600;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.humidity-value, .wind-value, .pressure-value{
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+
+
+
+
+.application-footer{
+    width: 100%;
+    height: 30px;
+    background-color: rgb(25, 25, 25);
+    padding: 4px;
+}
+.copyright{
+    font-size: 18px;
+    font-weight: 500px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    color: white;
+}
+
+
+@media screen and (max-width: 475px) {
+    .current-tempreature-details{
+        justify-content: center;
+    }
+    .wind, .humidity, .pressure{
+        width: 100%;
+    }
+}
